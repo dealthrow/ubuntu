@@ -1,0 +1,20 @@
+"TOP command"
+
+The 3 CPU states:
+>Idle
+>Running a user space program
+>Running the kernel
+
+The 7 cpu statistics explained:
+
+The CPU line will look something like this:
+%Cpu(s): 24.8 us,  0.5 sy,  0.0 ni, 73.6 id,  0.4 wa,  0.0 hi,  0.2 si,  0.0 st
+
+24.8us-	tells us that the processor is spending 24.8% of its time running user space processes.
+73.6 id-	tell us that the processsor was idle just over 73% of the time during the last sampling period.
+0.5 sy-	this is the amount of time that the CPU spent running the kernel. ( all the processes and system resources are handled by the linux kernel)
+0.0 ni-	Shows how much time the CPU spent running user space processes that have been niced.
+0.4 wa-	Input and output operations.
+0.0 hi & 0.2 si-	shows how much time the processor has spent servicing interrupts.
+0.0 st-	Only applies to virtual machines/ how long the virtual CPU has spent waiting for the hypervisor to service another virtual CPU.
+

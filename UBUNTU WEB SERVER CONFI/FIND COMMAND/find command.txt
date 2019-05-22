@@ -1,0 +1,26 @@
+			"FIND COMMANDS"
+
+. (period)- will only search the current directory
+~/ will search your entire home directory
+/ search the whole filesystem
+d -directory
+f -file
+
+#find / -type d -name "example.com"
+#find /etc -name *file1* -print
+#find . -type f -name "*.php"		:find all php files in directory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2cpu 8gb 

@@ -1,0 +1,17 @@
+PBX (Private Branch Exchange)		is a private telephone network used within a company or organization
+COMMUNICATION CHANNELS
+VoIP, ISDN or analog
+
+
+
+
+
+asterisk -r or rasterisk
+asterisk -rx "logger reload"		run CLI command in a shell script
+!<command>			executes a given shell command
+add extension			add new extension into context
+debug channel 			enable debugging on a channel
+dont include			remove a specified include from context
+
+
+

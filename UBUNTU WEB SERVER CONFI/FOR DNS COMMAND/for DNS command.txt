@@ -1,0 +1,15 @@
+For DNS 
+
+cd /etc/network/
+cd ..
+cd .etc/netplan/
+ls -l
+netstat -ltn
+nslookup
+server 0.0.0.0
+set type=ns 		routing service means list of all the dns
+
+server 8.8.8.8
+set type=a  		shows IP addresses
+
+netstat -tp			displaying service name with their PID number, using option -tp will display "PID/Program Name"

@@ -1,0 +1,61 @@
+APACHE INSTALLATION
+
+sudo apt update
+sudo apt install apache2
+sudo ufw app list	- showing the list application profiles
+sudo ufw allow 'Apache'	-allow traffic on port 80
+sudo ufw status		-shows http traffic allowed in the displayed output
+sudo systemctl status -apache2		- check with the systemd init system to make sure the service is running
+
+hostname -I			- shows ip address
+curl -4 icanhazip.com			- give your public IP address as seen from another location on the internet
+
+sudo systemctl stop apache2		- stop web server
+sudo systemctl start apache2		- start the web server
+sudo systemctl restart apache2		- stop and then start the service again
+sudo systemctl reload apache2		- by making configuration changes, apache can often reload without dropping connections
+sudo systemctl disable apache2	- for disable start automatically when the server boots
+sudo systemctl enable apache2		- to re enable the service to start up at boot
+
+
+	
+a2enmod ssl a2dismod ssl
+a2ensite- for enabling configuration files a2dissite for disable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+virtual host can be IP base meaning that you have a different IP address for every website or 
+Name based meaning that you have multiple names running on each IP address

@@ -1,0 +1,14 @@
+
+
+lsof -list the open files associated with your application
+				[ sample: lsof -i tcp:80 ]
+lsblk -list information about all or the specified block devices
+[ ifconfig eth0 down ] -disable an interface
+[ ifconfig eth0 up ] -enable an interface
+[ ifconfig eth0 x.x.x.x netmask x.x.x.x broadcast x.x.x.x ] -assign IP Address, Netmask and Broadcast to Interface eth0
+
+netstat -at (list of all TCP Ports)
+netstat -s (show statics for all ports)
+
+daemon (also known as background processes)	-is a linux or UNIX program that runs in the background. 
+ex: httpd, sshd. Linux often start daemon at boot time.

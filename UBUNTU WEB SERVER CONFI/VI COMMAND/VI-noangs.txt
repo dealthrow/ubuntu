@@ -1,0 +1,7 @@
+:"VI COMMAND"
+
+:%s/pattern/replace/g		:syntax for replacing every occurrence of a string in the entire text is similar.
+:s/pattern/replacle/		:syntax for replacing one string with another string in the current line
+/			:find command
+r			:replace first word
+R			:

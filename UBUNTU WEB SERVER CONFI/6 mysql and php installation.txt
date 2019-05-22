@@ -1,0 +1,75 @@
+								"INSTALLING MYSQL"
+
+______________________________________________________________________________________________________________________________________________________________________________
+|COMMAND:									   |	PURPOSE:							|
+|``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````|````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````|
+| #apt install mysql-server								   |									|
+|										   |									|
+| #mysql_secure_installation								   | (for simple security script)							|
+| 										   |									|
+| #sudo mysql -u root -p								   |									|
+| mysql>SELECT user,authentication_string,plugin,host FROM mysql.user;				   | (check each authentication method of your MMMMySQL user accounts)			|
+| mysql>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'insertpasswordhere';  | (to configure the root account to authenticate with a password)			|
+| mysql>FLUSH PRIVILEGES;								   | (tells the server to reload the grant tables and put your new changes into effect.)		|
+| mysql>show databases;								   |									|
+| mysql>create database samplename;							   | (create database)								|
+| mysql>drop database samplename;							   | (delete database)								|
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+								"PHP INSTALLATION"
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+sudo apt install php -y
+
+Then open /etc/apache2/mods-enable/dir.conf fiel and change it to have index.php listed first.
+ex: 
+IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+
+Then restart apache web server
+#systemctl restart apache2
+
+"Installing php modules"
+
+apt install php-curl
+
+
+Install PHP 7.2
+PHP 7.2 is included in the default Ubuntu repository for 18.04. You can list each of the available PHP 7.2 packages with the following command:
+
+apt-cache pkgnames | grep php7.2
+Next, install the packages that your application requires:
+
+sudo apt-get install php -y
+sudo apt-get install php-{bcmath,bz2,intl,gd,mbstring,mysql,zip,fpm} -y
+Finally, restart your webserver to allow PHP to run.
+
+The main config file of PHP 7.2 will be saved as /etc/php/7.2/fpm/php.ini. You can use the vi text editor to modify relevant settings in that file:
+
+sudo vi /etc/php/7.2/fpm/php.ini
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tunneling means providing a secure path through 
+
+Tunneling means providing a secure path through an untrusted network. 
+SSH Tunneling is an encrypted tunnel created using the SSH protocol connection
+SSH Tunnels also allow users to bypass firewalls

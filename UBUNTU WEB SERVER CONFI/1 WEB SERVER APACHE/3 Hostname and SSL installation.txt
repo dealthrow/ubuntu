@@ -1,0 +1,57 @@
+>>>Creating Self-Signed Certificate<<<
+
+after installing the apache2, make directory by typing ( mkdir -p /var/www/html/"example.com/public_html )
+The directory that you created are owned by root user. So we need to change the ownership to the regular user
+run ( chown -R $USER:$USER /var/www/html/"example.com"/public_html )
+"TAKE NOTE: $USER refers the currently logged-in user"
+Next, set read permission to the Apache root directory i.e /var/www/html/ using command:
+( chmod -R 755 /var/www/html/ )
+Let's create a sample page for our example.com site. To doso, run:
+( vi /var/www/html/example.com/public_html/index.html)
+<html>
+ <head>
+ <title>www.example1.com</title>
+ </head>
+ <body>
+ <h1>Hello, This is a test page for example1.com website</h1>
+ </body>
+</html>
+
+After saving it, lets create a configuration file for each virtual host. Just copy the 000-default.conf content to the new virtual host files 
+(cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/example.com.conf
+Then edit the configuration files..
+
+  ServerAdmin ubuntu@deds1.com
+        ServerName www.deds1.com
+        ServerAlias deds1.com
+        DocumentRoot /var/www/html/deds1.com/public_html
+
+
+
+Then disable the 000-default.conf
+( a2dissite 000-default.conf )
+Enable the example.com.conf
+( a2ensite example.com.conf )
+
+then restart the apache web server
+(systemctl restart apache2)
+
+Open /etc/hosts file in any editor
+( vi /etc/hosts )
+then add all your virtual websites IP and domain
+
+NEXT:
+
+"Install key for creating a Self-Signed Certificates"
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/chiragpatel.com.key -out /etc/ssl/certs/chiragpatel.com.crt
+
+Then copy the default-ssh.conf to example-ssl.conf to add path of your certificate
+
+For redirect to https just insert this text to your example.com.conf
+ (Redirect permanent "/" "https://example.com/")
+
+
+
+
+

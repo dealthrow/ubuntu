@@ -1,0 +1,70 @@
+"CreateAdd a new virtual disk"
+
+#fdisk -l
+#ls /dev/sd*
+#mkfs -t ext4 /dev/sdb
+#fdisk -l
+#mkdir /newdisk
+#mount /dev/sdb /newdisk
+#df -h
+#df -T		shows the partition type
+
+#vi /etc/fstab
+>insert<	/dev/sdb /newdisk ext4 defaults 1 3
+____________________________________________________________________
+
+"Create Partition"
+
+#fdisk /dev/sd*
+Command (m for help) 		:n
+choose primary 			:p
+Partition number (2-4, default 2) 		:2
+First sector 			:press enter for default
+Last sector, +sectors or +size {K,M,G,T,P} :
+w 				:for write table to disk and exit
+
+_____________________________________________________________________
+ DOS (MBR)
+   a   toggle a bootable flag
+   b   edit nested BSD disklabel
+   c   toggle the dos compatibility flag
+
+  Generic
+   d   delete a partition
+   F   list free unpartitioned space
+   l   list known partition types
+   n   add a new partition
+   p   print the partition table
+   t   change a partition type
+   v   verify the partition table
+   i   print information about a partition
+
+  Misc
+   m   print this menu
+   u   change display/entry units
+   x   extra functionality (experts only)
+
+  Script
+   I   load disk layout from sfdisk script file
+   O   dump disk layout to sfdisk script file
+
+  Save & Exit
+   w   write table to disk and exit
+   q   quit without saving changes
+
+  Create a new label
+   g   create a new empty GPT partition table
+   G   create a new empty SGI (IRIX) partition table
+   o   create a new empty DOS partition table
+   s   create a new empty Sun partition table
+
+
+
+
+
+
+
+#init 6		to reboot linux
+
+link:
+https://www.tutorialspoint.com/articles/how-to-createadd-a-new-virtual-disk-for-an-existing-linux-virtual-machine

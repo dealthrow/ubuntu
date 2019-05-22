@@ -1,0 +1,13 @@
+Create sudo user
+
+adduser username
+
+
+
+By default on Ubuntu systems, members of the group sudo are granted with sudo access.
+To add the user you created to the sudo group use the usermod command:
+
+usermod -aG sudo username	
+
+Switch to the newly created user:
+su - username	

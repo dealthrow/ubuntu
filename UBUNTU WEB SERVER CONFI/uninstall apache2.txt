@@ -1,0 +1,14 @@
+Uninstall apache2
+
+sudo service apache2 stop
+sudo apt-get purge apache2 apahce2-utils apache2.2.-bin apache2-common
+sudo apt-get autoremove
+whereis apache2
+sudo rm -rf /etc/apache2
+
+
+Uninstall mysql
+
+sudo apt-purge mysql*
+sudo apt-get autoremove
+sudo apt-get autoclean

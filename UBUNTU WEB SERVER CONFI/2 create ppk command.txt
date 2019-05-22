@@ -1,0 +1,54 @@
+ps -ax
+
+/home- home directory of the user
+
+mkdir .ssh
+cd .ssh
+vi authorized_keys
+ps -ax
+ps -ax | grep sshd
+/
+cd /
+ls -la
+cd /etc
+ls -la
+find /etc -name *ssh* -print
+ls -l /etc/default/ssh
+ls -l /etc/ssh
+cd ssh
+cd
+nano sshd_config
+systemctl restart sshd
+
+cat authorized_key
+cat- shows the content of a file
+
+
+vi (visual instrument)
+:q! -quit forcefully
+:qw -quit after saving
+ps (process status)- viewing the process running on the systems providing a snapshot of the current processes along with detailed information like user id, cpu usage, memory usage, command name etc.
+/etc -contain the configuration files for all the programs
+var- contains logs/ variable data like system logging files, mail and printer spool directories and transient and temporary files.
+grep command- is used to search text or searches the given file for lines containing a match to the given strings or words
+systemctl - used to start. stop, reload, restart and check status of services.
+(:%s/Findme/Replaceme/g)
+
+mkdir (make directories)
+-m =mode (set the file permission bits of created directories to mode)
+-p =parents (make any missing parent directories for each argument, setting their file permisson bits to the umask modified by u+wx
+-v =verbose print a message for each created directories
+-z =context[=context] 
+
+egrep -view lines of data which match a particular pattern
+grep -for searching plain text data sets for lines that match a regular expression.
+
+rm -rf *
+ls -l *deds
+ ls -l deds*
+rm deds*
+ls -l deds*
+
+
+
+

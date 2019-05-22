@@ -1,0 +1,7 @@
+globally (g) we run to delete something (/) and if the line starts (^) and if (\) there's space or no space or many spaces as we want (s*) and its a comment (;) then its seems to be empty (/) delete that line (d)
+g/^\s*;/d			used to delete unimportant script like comments.
+
+globally if the line starts if a line ends immediately then it seems to be empty so we can delete them
+g/^$/d			used to delete spaces
+
+

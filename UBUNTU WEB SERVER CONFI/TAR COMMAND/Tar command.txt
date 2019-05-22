@@ -1,0 +1,25 @@
+"TAR COMMAND"
+
+tar (tape archieve) for creating archieve of multiple files and folders into a single archive file and that archive file can be further compressed using gzip and bzip2 techniques.
+-used to take backup by archiving multiple files and directory into a single tar or archive file and later on files and directories can be extracted from the tar compressed file.
+
+
+TAR SAMPLE FOR COMPRESSING MULTIPLE DIRECTORY OR FILE:
+							[ tar -cvf example.tar /etc /root/directory ]
+tar command:
+
+	( -c ) option specify to create a tar file, 
+	( -v ) used for verbose output 
+	( -f ) used to specify the archive file name
+
+(-t) used to view the contents of tar files without extracting it. 		[ sample: tar -tvf example.tar ]
+(-x) used to extract the files and directories from the tar file. 		[ sample: tar -xvf example.tar ]
+(-C) path where you want to extract your directory. 			[ sample: tar -xvf example.tar -C /etc/apache2/sites-available/ ]
+(-zxp) for extracting tar.gz or tgz.files/ unzip			[ sample: tar -zxpvf example.tar.gz -C / / / ]		
+
+
+
+
+
+
+

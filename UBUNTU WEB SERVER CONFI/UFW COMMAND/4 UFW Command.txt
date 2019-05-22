@@ -1,0 +1,23 @@
+UFW (Uncomplicated Firewall)				- is a frontend for managing firewall rules. It aims to make firewall configuration easy./firewall configuration tool in Ubuntu
+
+which ufw						- it shows the path where the ufw located
+apt-get install ufw
+ufw enable					- enabling ufw
+ufw disable					- disabling ufw
+ufw status verbose					- verifies that ufw is running
+ufw allow 22					- allowing ssh access in the firewall. add ( 22/tcp ) for tcp connection
+ufw allow ssh					- this command will open the default ssh port
+ufw status						- check the rule
+ufw deny 80					- used to close a port in the firewall
+ufw allow 6660:6670/tcp				- allowing TCP (port 6660 is tcp)
+ufw allow 6660:6670/udp				-allowing UDP (port 6670 is udp)
+ufw allow from "ipaddress"				- add a specific IP to allow access to all services by adding "from" option
+ufw allow from "ipaddress"/subnet			- adding IP subnet (range of IP address)
+ufw allow from 192.168.1.106 proto tcp to any port 22		- allowing only this IP can access ssh port 22
+ufw delete allow ssh					- Deleting the allow SSH rule with service nameufw
+ufw status numbered- 
+ufw delete "number"
+ufw reset						- for turning off UFW completely and delete all the rules
+ufw logging on					- enable logging use
+ufw logging off					- disable logging use
+

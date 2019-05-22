@@ -1,0 +1,68 @@
+L_________________________________________________________________________________________________________________________________________________________
+"DF (DISPLAY FILE)"
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+df			-displays the information of device name, total blocks, total disk space, used disk space, available disk space and mount points on a files system
+df -a			-displays information of dummy file systems
+df -h			-provides option to display size in Human Readable format/ current partition/ show files system
+df -hT /home		-see information of only device /home file system in Human readable format
+du -sh sampte.file		-to calculate the size of a file
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+
+fdisk (FIXED DISK)		-view, create, resize, delete, change, copy and move partitions on a hard drive using its own user friendly text based menu driven interface.
+fdisk -l | grep 'Disk /dev'	[ command | grep 'search-pattern' ]
+fdisk -l			-check current disk
+mkfs			-used to build a Linux filesystem on a device usually hard disk partition
+ext4, Ntfs, fat		-partition type
+lsblk 			-list information about all or the specified block devices
+__________________________________________________________________________________________________________________________________________________________
+"LINUX COMMANDLINE TOOLS"
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+arp -a			shows the mac address
+top			is a task manager program that displays information about CPU and memory utilization.
+chmod			chmod u=rwx,g=rx,o=r myfile2
+chown			chown -R $USER:$USER [filename] / chown -R ubuntu:ubuntu [filename]
+find			find [filename]
+cp			cp [filename] [destinationfile]
+vi			vi [file or directory name]
+mv oldname newname	rename
+cd			cd .. (back to pervious directory),
+sudo			sudo -s (used to login as root or superuser)
+uptime			display the time since the last boot
+uname -a			prints all system information, including machine name, kernel name, & version
+lsb_release -a		prints version information for the Linux release you're running
+free			displays the amount of free and used memory in the system
+adduser or newuser		will create a new general user called "newuser" on your system
+passwd newuser		add password for the new user account
+rsync			used for copying and synchronizing files and directories remotely
+"comm" same as "diff"		compare files
+du			used to show disk space usage of files present in a directory as well as its sub-directories
+expr 20 + 30		used to calculate
+ls			list content of a directory
+ls -la | wc -l		shows how many the files inside the directory
+ssh			used to remote login
+echo			prints a text of line provided to it
+eject			used to eject removable media such as DVD/CD ROM or floppy disk from the system	
+________________________________________________________________________
+"for ps"
+https://www.binarytides.com/linux-ps-command/
+
+ps 			viewing the processes running on the system.
+ps -C "apache2"		search processes by their name or command
+
+__________________________________________________________________________________________________________________________________________________________
+screen -S 			(sample session name) 
+ctrl+a d 			for detach and 
+screen -r 			(session name or number) for reattached shutdown
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+ls 			-shows the list of file and directory
+mv			-move file or directory
+man			-shows manual of the inputted command
+mkdir			-make directories
+rmdir			-remove directories
+touch			-create a file
+rm			-remove
+locate			-used to locate file and directory
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+ln command
+ln -s /path/to/directory
