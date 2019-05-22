@@ -1,0 +1,20 @@
+"Ubuntu directory structure"
+
+/	root			the starting point of your directory structure
+/bin	User Binaries		contain lots of program (ls, shells, grep, etc.)
+/sbin	System Binaries		system administration stored in these directories.
+/etc	Configuration Files		contains configuration files required by all programs.
+/dev	Device files		contains devices like your cd drive, IDE hard drive. (devices also treated like a files and you can read and write devices like they were files.)
+/proc	Process Information		is just a virtual directory, contains some info about the kernel itself.
+/var	Variable Files		contains log files, variable data that changes constantly when the system is running
+/tmp	Temporary files		you can write your temporary files in these directories
+/usr	User Programs		contains user applications and a variety of other things like their source code, picture, docs, or config files they use.
+/home	Home Directories		users keep their personal files
+/boot	Boot Loader Files		where linux keeps information that it needs when booting up.
+/lib	System Libraries		shared libraries for programs that are dynamically linked
+/opt	Optional add-on Application	contains add-on application from individual vendors
+/mnt	Mount Directory		temporary mount directory where sysadmins can mount filesystems/ used for mount points/ contains mount point for different devices.
+/media	Removable Media Devices	temporary mount directory for removable devices.
+/srv	Service Data		contains server specific services related data.
+
+
